@@ -9,5 +9,6 @@ data class Weapon(
     val manufacturer: String,
     val weightKg: Double,
     val barrelLengthMm: Int,
-    val rateOfFire: Int
+    val rateOfFire: Int,
+    val imageResId: Int
 )

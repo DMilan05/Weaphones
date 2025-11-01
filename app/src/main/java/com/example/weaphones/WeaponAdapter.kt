@@ -1,36 +1,45 @@
 package com.example.weaphones
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
+import android.widget.BaseAdapter
 import android.widget.TextView
 
-class WeaponAdapter(
-    context: Context,
-    private val weapons: List<Weapon>
-) : ArrayAdapter<Weapon>(context, 0, weapons) {
+class WeaponAdapter(private val context: Context, private val weapons: List<Weapon>) : BaseAdapter() {
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val itemView = convertView ?: LayoutInflater.from(context)
-            .inflate(R.layout.item_weapon, parent, false)
+    override fun getCount(): Int = weapons.size
+    override fun getItem(position: Int): Any = weapons[position]
+    override fun getItemId(position: Int): Long = position.toLong()
+
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+        val view = convertView ?: LayoutInflater.from(context).inflate(R.layout.item_weapon, parent, false)
 
         val weapon = weapons[position]
 
-        val nameText: TextView = itemView.findViewById(R.id.weaponName)
-        val caliberText: TextView = itemView.findViewById(R.id.weaponCaliber)
-        val originText: TextView = itemView.findViewById(R.id.weaponOrigin)
+        val nameText: TextView = view.findViewById(R.id.weaponName)
+        val detailsText: TextView = view.findViewById(R.id.weaponDetails)
 
         nameText.text = weapon.name
-        caliberText.text = "Kaliber: ${weapon.caliber}"
-        originText.text = "Származás: ${weapon.origin}\n" +
-                "Gyártó: ${weapon.manufacturer}\n" +
-                "Gyártás éve: ${weapon.year}\n" +
-                "Súly: ${weapon.weightKg} kg\n" +
-                "Tűzgyorsaság: ${weapon.rateOfFire} lövés/perc"
+        detailsText.text = "${weapon.caliber} • ${weapon.origin} • ${weapon.year}"
 
+        view.setOnClickListener {
+            val intent = Intent(context, WeaponDetailActivity::class.java)
+            intent.putExtra("name", weapon.name)
+            intent.putExtra("category", weapon.category)
+            intent.putExtra("caliber", weapon.caliber)
+            intent.putExtra("origin", weapon.origin)
+            intent.putExtra("year", weapon.year)
+            intent.putExtra("manufacturer", weapon.manufacturer)
+            intent.putExtra("weight", weapon.weightKg)
+            intent.putExtra("barrel", weapon.barrelLengthMm)
+            intent.putExtra("rof", weapon.rateOfFire)
+            intent.putExtra("imageResId", weapon.imageResId)
+            context.startActivity(intent)
+        }
 
-        return itemView
+        return view
     }
 }
