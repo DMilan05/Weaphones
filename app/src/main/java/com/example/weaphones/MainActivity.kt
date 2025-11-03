@@ -3,6 +3,7 @@ package com.example.weaphones
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -34,7 +35,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
-
+        val quizButton: Button = findViewById(R.id.quizButton)
+        quizButton.setOnClickListener {
+            val intent = Intent(this, QuizActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

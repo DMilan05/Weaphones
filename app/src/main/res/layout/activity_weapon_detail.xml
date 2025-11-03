@@ -13,12 +13,13 @@
         <ImageView
             android:id="@+id/weaponImage"
             android:layout_width="match_parent"
-            android:layout_height="240dp"
+            android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             android:background="#222"
             android:layout_marginBottom="16dp"
             android:contentDescription="Weapon image" />
+
 
 
         <TextView
