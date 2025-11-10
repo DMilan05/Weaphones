@@ -11,7 +11,7 @@
         private var currentIndex = 0
         private var score = 0
 
-        // --- TELJES KÉRDÉSBANK (bővített verzió) ---
+
         private val allQuestions = listOf(
             // --- AK család ---
             QuizQuestion.Image(
@@ -192,7 +192,7 @@
             )
         )
 
-        // --- VÉLETLEN 10 kérdés minden indításkor ---
+
         private val questions = allQuestions.shuffled().take(10)
         private val idToIndexMap = mutableMapOf<Int, Int>()
 

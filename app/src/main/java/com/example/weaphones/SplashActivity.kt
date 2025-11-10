@@ -18,14 +18,12 @@ class SplashActivity : AppCompatActivity() {
         val logo: ImageView = findViewById(R.id.logo)
         val title: TextView = findViewById(R.id.splashTitle)
 
-        // Betöltjük az animációkat
         val fadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         val slideUp = AnimationUtils.loadAnimation(this, R.anim.slide_up)
 
         logo.startAnimation(fadeIn)
         title.startAnimation(slideUp)
 
-        // 2,5 másodperc után átirányítás a főképernyőre
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
             finish()
