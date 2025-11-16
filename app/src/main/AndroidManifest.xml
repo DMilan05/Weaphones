@@ -23,7 +23,7 @@
         <activity android:name=".WeaponListActivity" />
         <activity android:name=".WeaponDetailActivity" />
         <activity android:name=".QuizActivity" />
-
+        <activity android:name=".LeaderboardActivity" />
 
 
     </application>

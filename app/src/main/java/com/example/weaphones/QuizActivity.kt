@@ -10,6 +10,8 @@
 
         private var currentIndex = 0
         private var score = 0
+        private var startTime = 0L
+
 
 
         private val allQuestions = listOf(
@@ -200,6 +202,8 @@
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_quiz)
             showQuestion()
+            startTime = System.currentTimeMillis()
+            showQuestion()
         }
 
         private fun showQuestion() {
@@ -261,10 +265,22 @@
         }
 
         private fun showResult() {
+            val elapsedTime = System.currentTimeMillis() - startTime
+            DatabaseHelper(this).addResult(
+                QuizResult(
+                    correct = score,
+                    total = questions.size,
+                    timeMillis = elapsedTime,
+                    timestamp = System.currentTimeMillis()
+                )
+            )
+
             AlertDialog.Builder(this)
                 .setTitle("Kvíz vége")
                 .setMessage("Eredményed: $score / ${questions.size}")
                 .setPositiveButton("OK") { _, _ -> finish() }
                 .show()
         }
+
+
     }

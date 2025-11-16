@@ -17,16 +17,6 @@
         android:textStyle="bold"
         android:layout_marginBottom="12dp" />
 
-    <ListView
-        android:id="@+id/categoryListView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_below="@id/titleText"
-        android:layout_above="@id/quizButton"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="8dp"
-        android:listSelector="@android:color/transparent" />
-
     <Button
         android:id="@+id/quizButton"
         android:layout_width="match_parent"
@@ -39,5 +29,24 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp" />
-</RelativeLayout>
 
+    <Button
+        android:id="@+id/btnLeaderboard"
+        android:text="Eredmények"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/quizButton"
+        android:layout_marginBottom="4dp" />
+
+    <ListView
+        android:id="@+id/categoryListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/titleText"
+        android:layout_above="@id/btnLeaderboard"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:listSelector="@android:color/transparent"
+        android:layout_marginBottom="16dp" />
+
+</RelativeLayout>

@@ -40,5 +40,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, QuizActivity::class.java)
             startActivity(intent)
         }
+
+        findViewById<Button>(R.id.btnLeaderboard).setOnClickListener {
+            startActivity(Intent(this, LeaderboardActivity::class.java))
+        }
+
     }
 }
