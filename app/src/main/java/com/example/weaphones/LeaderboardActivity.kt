@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 class LeaderboardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        LanguageManager.applyLanguage(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leaderboard)
 

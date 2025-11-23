@@ -1,3 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Weaphones</string>
+
+    <!-- Alap -->
+    <string name="app_name" translatable="false">Weaphones</string>
+
+    <!-- Nyelvváltó -->
+    <string name="btn_language">Nyelv</string>
+    <string name="lang_hungarian">Magyar</string>
+    <string name="lang_english">Angol</string>
+
+    <!-- MainActivity -->
+    <string name="title_categories">Fegyverkategóriák</string>
+    <string name="btn_start_quiz">Indítsd a kvízt</string>
+    <string name="btn_leaderboard">Eredmények</string>
+
+    <!-- Leaderboard -->
+    <string name="leaderboard_title">Eredmények</string>
+    <string name="result_hit">Találat</string>
+    <string name="result_time">Idő</string>
+    <string name="result_seconds">mp</string>
+
+    <!-- Quiz -->
+    <string name="quiz_end">Kvíz vége</string>
+    <string name="quiz_result">Eredményed: %1$d / %2$d</string>
+    <string name="ok">OK</string>
+
+    <!-- Weapon List -->
+    <string name="category_title">Kategória: %1$s</string>
+
+    <!-- Weapon Detail -->
+    <string name="detail_category">Kategória: %1$s</string>
+    <string name="detail_caliber">Kaliber: %1$s</string>
+    <string name="detail_origin">Származás: %1$s</string>
+    <string name="detail_manufacturer">Gyártó: %1$s</string>
+    <string name="detail_year">Gyártás éve: %1$d</string>
+    <string name="detail_weight">Tömeg: %1$.2f kg</string>
+    <string name="detail_barrel">Csőhossz: %1$d mm</string>
+    <string name="detail_rof">Tűzgyorsaság: %1$d lövés/perc</string>
+    <string name="cat_ar">Gépkarabély</string>
+    <string name="cat_pistol">Pisztoly</string>
+    <string name="cat_smg">Géppisztoly</string>
+    <string name="cat_lmg">Géppuska</string>
+    <string name="cat_sniper">Mesterlövész puska</string>
+    <string name="cat_shotgun">Sörétes puska</string>
+    <string name="cat_launcher">Rakétavető</string>
+    <string name="cat_classic">Klasszikus</string>
+    <string name="cat_gl">Gránátvető</string>
+
+    <string name="country_ussr">Szovjetunió</string>
+    <string name="country_russia">Oroszország</string>
+    <string name="country_hungary">Magyarország</string>
+    <string name="country_usa">USA</string>
+    <string name="country_germany">Németország</string>
+    <string name="country_france">Franciaország</string>
+    <string name="country_belgium">Belgium</string>
+    <string name="country_czech">Csehország</string>
+    <string name="country_austria">Ausztria</string>
+    <string name="country_italy">Olaszország</string>
+    <string name="country_israel">Izrael</string>
+    <string name="country_sweden">Svédország</string>
+    <string name="country_uk">Egyesült Királyság</string>
+    <string name="lb_hits">Találat</string>
+    <string name="lb_time">Idő</string>
+    <string name="lb_sec">mp</string>
+
+    <string name="quiz_over_title">Kvíz vége</string>
+    <string name="quiz_score_format">Eredményed: %1$d / %2$d</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_next">Tovább</string>
 </resources>

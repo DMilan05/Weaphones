@@ -23,15 +23,21 @@ class LeaderboardAdapter(private val results: List<QuizResult>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val r = results[position]
+        val context = holder.itemView.context
 
         val seconds = r.timeMillis / 1000
         val dateString = SimpleDateFormat("yyyy.MM.dd HH:mm", Locale.getDefault())
             .format(Date(r.timestamp))
 
+
+        val hitLabel = context.getString(R.string.lb_hits)
+        val timeLabel = context.getString(R.string.lb_time)
+        val secLabel = context.getString(R.string.lb_sec)
+
         holder.text.text = """
             $dateString
-            Találat: ${r.correct}/${r.total}
-            Idő: ${seconds} mp
+            $hitLabel: ${r.correct}/${r.total}
+            $timeLabel: ${seconds} $secLabel
         """.trimIndent()
     }
 

@@ -2,9 +2,9 @@ package com.example.weaphones
 
 data class Weapon(
     val name: String,
-    val category: String,
+    val categoryRes: Int,
     val caliber: String,
-    val origin: String,
+    val originRes: Int,
     val year: Int,
     val manufacturer: String,
     val weightKg: Double,

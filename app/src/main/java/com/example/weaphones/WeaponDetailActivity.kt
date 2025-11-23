@@ -15,10 +15,14 @@ class WeaponDetailActivity : AppCompatActivity() {
         val nameTitle: TextView = findViewById(R.id.weaponNameTitle)
         val detailText: TextView = findViewById(R.id.weaponDetailText)
 
+        // Adatok átvétele
         val name = intent.getStringExtra("name")
-        val category = intent.getStringExtra("category")
+        val categoryRes = intent.getIntExtra("categoryRes", 0)
         val caliber = intent.getStringExtra("caliber")
-        val origin = intent.getStringExtra("origin")
+
+        // FONTOS: getIntExtra-t használunk, mert resource ID-t várunk
+        val originRes = intent.getIntExtra("originRes", 0)
+
         val year = intent.getIntExtra("year", 0)
         val manufacturer = intent.getStringExtra("manufacturer")
         val weight = intent.getDoubleExtra("weight", 0.0)
@@ -26,22 +30,25 @@ class WeaponDetailActivity : AppCompatActivity() {
         val rof = intent.getIntExtra("rof", 0)
         val imageResId = intent.getIntExtra("imageResId", 0)
 
-
         nameTitle.text = name
         if (imageResId != 0) {
             imageView.setImageResource(imageResId)
         }
 
+        // Kategória és Ország nevének lefordítása ID-ból
+        val categoryName = if (categoryRes != 0) getString(categoryRes) else ""
+        val originName = if (originRes != 0) getString(originRes) else ""
 
+        // Szöveg összeállítása
         detailText.text = """
-            Kategória: $category
-            Kaliber: $caliber
-            Származás: $origin
-            Gyártó: $manufacturer
-            Év: $year
-            Tömeg: ${"%.2f".format(weight)} kg
-            Csőhossz: $barrel mm
-            Tűzgyorsaság: $rof lövés/perc
+            ${getString(R.string.detail_category, categoryName)}
+            ${getString(R.string.detail_caliber, caliber)}
+            ${getString(R.string.detail_origin, originName)}
+            ${getString(R.string.detail_manufacturer, manufacturer)}
+            ${getString(R.string.detail_year, year)}
+            ${getString(R.string.detail_weight, weight)}
+            ${getString(R.string.detail_barrel, barrel)}
+            ${getString(R.string.detail_rof, rof)}
         """.trimIndent()
     }
 }

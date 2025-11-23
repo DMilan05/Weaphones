@@ -7,20 +7,20 @@ import androidx.appcompat.app.AppCompatActivity
 
 class WeaponListActivity : AppCompatActivity() {
 
-    val allWeapons = WeaponData.allWeapons
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weapon_list)
 
-        val category = intent.getStringExtra("category")
+        val categoryRes = intent.getIntExtra("categoryRes", 0)
+
+        val categoryName = if (categoryRes != 0) getString(categoryRes) else ""
+
         val categoryText: TextView = findViewById(R.id.categoryTitle)
+        categoryText.text = getString(R.string.category_title, categoryName)
+
+        val filteredWeapons = WeaponData.allWeapons.filter { it.categoryRes == categoryRes }
+
         val listView: ListView = findViewById(R.id.weaponListView)
-
-        categoryText.text = "Kategória: $category"
-
-        val filteredWeapons = allWeapons.filter { it.category == category }
-
         val adapter = WeaponAdapter(this, filteredWeapons)
         listView.adapter = adapter
     }

@@ -22,15 +22,22 @@ class WeaponAdapter(private val context: Context, private val weapons: List<Weap
         val nameText: TextView = view.findViewById(R.id.weaponName)
         val detailsText: TextView = view.findViewById(R.id.weaponDetails)
 
+
+        val originName = context.getString(weapon.originRes)
+
         nameText.text = weapon.name
-        detailsText.text = "${weapon.caliber} • ${weapon.origin} • ${weapon.year}"
+
+        detailsText.text = "${weapon.caliber} • $originName • ${weapon.year}"
 
         view.setOnClickListener {
             val intent = Intent(context, WeaponDetailActivity::class.java)
             intent.putExtra("name", weapon.name)
-            intent.putExtra("category", weapon.category)
+            intent.putExtra("categoryRes", weapon.categoryRes)
             intent.putExtra("caliber", weapon.caliber)
-            intent.putExtra("origin", weapon.origin)
+
+
+            intent.putExtra("originRes", weapon.originRes)
+
             intent.putExtra("year", weapon.year)
             intent.putExtra("manufacturer", weapon.manufacturer)
             intent.putExtra("weight", weapon.weightKg)
