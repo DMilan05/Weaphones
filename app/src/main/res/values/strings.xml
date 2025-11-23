@@ -43,7 +43,9 @@
     <string name="cat_lmg">Géppuska</string>
     <string name="cat_sniper">Mesterlövész puska</string>
     <string name="cat_shotgun">Sörétes puska</string>
-    <string name="cat_launcher">Rakétavető</string>
+    <string name="cat_launcher_rpg">Páncéltörő (Rakétavető)</string>
+    <string name="cat_launcher_at4">Páncéltörő (Egyszer használatos)</string>
+    <string name="cat_launcher_javelin">Páncéltörő (Irányított)</string>
     <string name="cat_classic">Klasszikus</string>
     <string name="cat_gl">Gránátvető</string>
 

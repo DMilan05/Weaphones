@@ -47,14 +47,22 @@ object WeaponData {
         Weapon("Benelli M4", R.string.cat_shotgun, "12-gauge", R.string.country_italy, 1999, "Benelli Armi", 3.8, 470, 120, R.drawable.benellim4),
         Weapon("Remington 870", R.string.cat_shotgun, "12-gauge", R.string.country_usa, 1950, "Remington Arms", 3.2, 470, 40, R.drawable.r870),
 
-        // ---- RAKÉTAVETŐK ----
-        Weapon("RPG-7", R.string.cat_launcher, "40mm (PG-7V)", R.string.country_ussr, 1961, "Bazalt", 7.0, 400, 1, R.drawable.rpg7),
-        Weapon("AT4", R.string.cat_launcher, "84mm", R.string.country_sweden, 1987, "SAAB Bofors", 6.7, 100, 1, R.drawable.at4),
-        Weapon("FGM-148 Javelin", R.string.cat_launcher, "127mm", R.string.country_usa, 1996, "Raytheon", 22.3, 1050, 1, R.drawable.javelin),
 
-        // ---- GRÁNÁTVETŐK  ----
+        // ---- RAKÉTAVETŐK / PÁNCÉLTÖRŐK (Specifikus kategóriák) ----
+
+        // RPG-7 -> Sima rakétavető
+        Weapon("RPG-7", R.string.cat_launcher_rpg, "40mm (PG-7V)", R.string.country_ussr, 1961, "Bazalt", 7.0, 400, 1, R.drawable.rpg7),
+
+        // AT4 -> Egyszer használatos
+        Weapon("AT4", R.string.cat_launcher_at4, "84mm", R.string.country_sweden, 1987, "SAAB Bofors", 6.7, 100, 1, R.drawable.at4),
+
+        // Javelin -> Irányított
+        Weapon("FGM-148 Javelin", R.string.cat_launcher_javelin, "127mm", R.string.country_usa, 1996, "Raytheon", 22.3, 1050, 1, R.drawable.javelin),
+
+        // ---- GRÁNÁTVETŐK ----
         Weapon("M203", R.string.cat_gl, "40mm", R.string.country_usa, 1969, "Various", 1.4, 305, 6, R.drawable.m203),
         Weapon("MK 19", R.string.cat_gl, "40×53mm", R.string.country_usa, 1968, "General Dynamics", 35.0, 400, 325, R.drawable.mk19),
+
 
         // ---- KLASSZIKUS ----
         Weapon("Thompson M1A1", R.string.cat_classic, ".45 ACP", R.string.country_usa, 1942, "Auto-Ordnance", 4.8, 267, 600, R.drawable.thompson),

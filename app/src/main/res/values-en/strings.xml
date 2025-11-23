@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Általános -->
+    <string name="app_name">Weaphones</string>
+
+    <!-- Nyelvválasztó -->
+    <string name="btn_language">Language</string>
+    <string name="lang_hungarian">Hungarian</string>
+    <string name="lang_english">English</string>
+
+    <!-- MainActivity -->
+    <string name="title_categories">Weapon Categories</string>
+    <string name="btn_start_quiz">Start Quiz</string>
+    <string name="btn_leaderboard">Results</string>
+
+    <!-- Leaderboard -->
+    <string name="leaderboard_title">Results</string>
+    <string name="result_hit">Hits</string>
+    <string name="result_time">Time</string>
+    <string name="result_seconds">sec</string>
+
+    <!-- Quiz -->
+    <string name="quiz_end">Quiz Finished</string>
+    <string name="quiz_result">Your result: %1$d / %2$d</string>
+    <string name="ok">OK</string>
+
+    <!-- Weapon List -->
+    <string name="category_title">Category: %1$s</string>
+
+    <!-- Weapon Detail -->
+    <string name="detail_category">Category: %1$s</string>
+    <string name="detail_caliber">Caliber: %1$s</string>
+    <string name="detail_origin">Origin: %1$s</string>
+    <string name="detail_manufacturer">Manufacturer: %1$s</string>
+    <string name="detail_year">Year: %1$d</string>
+    <string name="detail_weight">Weight: %1$.2f kg</string>
+    <string name="detail_barrel">Barrel Length: %1$d mm</string>
+    <string name="detail_rof">Rate of Fire: %1$d RPM</string>
+    <string name="cat_ar">Assault Rifle</string>
+    <string name="cat_pistol">Pistol</string>
+    <string name="cat_smg">SMG</string>
+    <string name="cat_lmg">Machine Gun</string>
+    <string name="cat_sniper">Sniper Rifle</string>
+    <string name="cat_shotgun">Shotgun</string>
+    <string name="cat_launcher_rpg">Anti-Tank (Rocket Launcher)</string>
+    <string name="cat_launcher_at4">Anti-Tank (Single-use)</string>
+    <string name="cat_launcher_javelin">Anti-Tank (Guided)</string>
+    <string name="cat_classic">Classic</string>
+    <string name="cat_gl">Grenade Launcher</string>
+
+    <string name="country_ussr">Soviet Union</string>
+    <string name="country_russia">Russia</string>
+    <string name="country_hungary">Hungary</string>
+    <string name="country_usa">USA</string>
+    <string name="country_germany">Germany</string>
+    <string name="country_france">France</string>
+    <string name="country_belgium">Belgium</string>
+    <string name="country_czech">Czech Republic</string>
+    <string name="country_austria">Austria</string>
+    <string name="country_italy">Italy</string>
+    <string name="country_israel">Israel</string>
+    <string name="country_sweden">Sweden</string>
+    <string name="country_uk">United Kingdom</string>
+    <string name="lb_hits">Hits</string>
+    <string name="lb_time">Time</string>
+    <string name="lb_sec">sec</string>
+
+    <string name="quiz_over_title">Quiz Over</string>
+    <string name="quiz_score_format">Score: %1$d / %2$d</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_next">Next</string>
+</resources>
